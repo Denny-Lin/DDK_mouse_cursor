@@ -7,9 +7,6 @@ using namespace std;
 
 
 int main(){
-	char g = 0;
-	int x = 0;
-	int y = 0;
 	POINT xypos;
 	int array_x[Max]={0};	
 	int array_y[Max]={0};	
@@ -24,11 +21,11 @@ int main(){
 		hit=0;
 		
 		if(!hit){ 
-			g=(char)getch(); 
+			hit=(char)getch(); 
 			
-			cout<<"Input: "<<(int)g<<"\t"<<g<<endl;
+			cout<<"Input: "<<(char)hit<<"\t"<<hit<<endl;
 			
-			if(g == 'S' || g == 's'){
+			if(hit == 'S' || hit == 's'){
 				cout<<"Recording."<<endl; 			
 						
 				while(!kbhit()){					
@@ -47,7 +44,7 @@ int main(){
 				i=0;
 				cout<<"Stop recording."<<endl;	
 			}
-			else if(g == 'e' || g == 'E'){
+			else if(hit == 'e' || hit == 'E'){
 				cout<<"Moving."<<endl;
 				
 				
