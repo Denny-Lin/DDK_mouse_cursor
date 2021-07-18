@@ -21,7 +21,7 @@ int main(){
 		hit=0;
 		
 		if(!hit){ 
-			hit=(char)getch(); 
+			hit=getch(); 
 			
 			cout<<"Input: "<<(char)hit<<"\t"<<hit<<endl;
 			
