@@ -46,8 +46,7 @@ int main(){
 			}
 			else if(hit == 'e' || hit == 'E'){
 				cout<<"Moving."<<endl;
-				
-				
+								
 				while(!kbhit()){						
 					SetCursorPos(array_x[i],array_y[i]);
 					cout<<i<<":\t"<<"X:"<<array_x[i]<<"\tY:"<<array_y[i]<<endl;
@@ -62,7 +61,7 @@ int main(){
 				}
 				
 				i=0;
-				cout<<"Stop Moving."<<endl;	
+				cout<<"Stop moving."<<endl;	
 			} 
 		}	
 	}
