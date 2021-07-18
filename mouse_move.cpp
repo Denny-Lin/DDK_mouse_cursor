@@ -12,11 +12,10 @@ int main(){
 	int array_y[Max]={0};	
 	
 	int i=0;
-	int hit=0;
+	int hit=0;//press from keyboard
 			
-	while(1){
-		
-		cout<<"Waiting."<<endl;
+	while(1){		
+		cout<<"Please input s(start recording) or e(execute recording):"<<endl;
 		hit = kbhit();
 		hit=0;
 		
@@ -25,8 +24,9 @@ int main(){
 			
 			cout<<"Input: "<<(char)hit<<"\t"<<hit<<endl;
 			
-			if(hit == 'S' || hit == 's'){
+			if(hit == 's' || hit == 'S'){
 				cout<<"Recording."<<endl; 			
+				cout<<"Press any key to stop."<<endl; 
 						
 				while(!kbhit()){					
 					GetCursorPos(&xypos);
@@ -46,7 +46,7 @@ int main(){
 			}
 			else if(hit == 'e' || hit == 'E'){
 				cout<<"Moving."<<endl;
-								
+							
 				while(!kbhit()){						
 					SetCursorPos(array_x[i],array_y[i]);
 					cout<<i<<":\t"<<"X:"<<array_x[i]<<"\tY:"<<array_y[i]<<endl;
