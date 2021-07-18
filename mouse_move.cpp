@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#define Max 100000
+#define Max 60000
 
 using namespace std;
 
@@ -15,7 +15,7 @@ int main(){
 	int hit=0;//press from keyboard
 			
 	while(1){		
-		cout<<"Please input s(start recording) or e(execute recording):"<<endl;
+		cout<<"Please input 's'(start recording) or 'e'(execute recording):"<<endl;
 		hit = kbhit();
 		hit=0;
 		
@@ -26,18 +26,20 @@ int main(){
 			
 			if(hit == 's' || hit == 'S'){
 				cout<<"Recording."<<endl; 			
-				cout<<"Press any key to stop."<<endl; 
+				cout<<"Press 'c' to stop."<<endl; 
 						
-				while(!kbhit()){					
+				while(1){					
 					GetCursorPos(&xypos);
-					cout<<"X:"<<xypos.x<<"\tY:"<<xypos.y<<endl;
+					cout<<i<<":\t"<<"X:"<<xypos.x<<"\tY:"<<xypos.y<<endl;
 					
 					array_x[i]=xypos.x;
 					array_y[i]=xypos.y;
 					i++;
 					
 					Sleep(100);
-
+					
+					if(kbhit()) hit=getch();
+					if(hit == 'c' || hit == 'C') break;
 					if(i>=Max-1) break;	
 				}
 				
