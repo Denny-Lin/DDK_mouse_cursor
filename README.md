@@ -4,7 +4,7 @@
   * Type 's' to record and type 'c' to stop recording.
   * Type 'e' to execute.
   * It can record 60s (6000/100), but you can change it.
-  * next time, I will add click function and change it to structure.
+  * Next time, I will add click function and change it to a structure.
 * ...
 
 # Platform
