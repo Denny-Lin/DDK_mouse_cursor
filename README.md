@@ -5,10 +5,12 @@
   * Type 'e' to execute.
   * It can record 60s (6000/100), but you can change it.
   * Next time, I will add click function and change it to a structure.
-* ...
+* To be more convenience, I will use txt file to record moving and clicking instead of array.
+* ... 
 
 # Platform
 * Windows
+* Dev C
 
 # Language 
 * C/C++
