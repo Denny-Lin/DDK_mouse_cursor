@@ -15,14 +15,13 @@ typedef struct mouse{
 	int kb_hit=0;//press from keyboard	
 } mouse_t;
 
-
 typedef struct cursor{
 	int x;
 	int y;
 	int click; //1=click, 0=unclick 
 } cursor_t;
 
-void Delay(int time){//time*1000¬°¬í¼Æ 
+void Delay(int time){//time*1000
 	clock_t now = clock(); 
 	
 	while(clock()-now<time); 
