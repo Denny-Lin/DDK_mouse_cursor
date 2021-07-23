@@ -11,8 +11,8 @@
   * MOV x y 100(ms)
   * CLK x y 100(ms)
   * ... 
+* To be more convenient, I should use global hook and the application should execute in background.
 * I hope one day this project could be Selenium-like.
-
 
 # Platform
 * Windows
