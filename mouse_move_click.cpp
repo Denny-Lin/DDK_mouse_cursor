@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
+#include <ctime> 
 #define Max 60000
 
 #define KEY_DOWN(VK_NONAME) ((GetAsyncKeyState(VK_NONAME) & 0x8000) ? 1:0) 
@@ -21,6 +22,11 @@ typedef struct cursor{
 	int click; //1=click, 0=unclick 
 } cursor_t;
 
+void Delay(int time){//time*1000¬°¬í¼Æ 
+	clock_t now = clock(); 
+	
+	while(clock()-now<time); 
+}
 
 int main(){
 	mouse_t mouse;
@@ -54,7 +60,7 @@ int main(){
 				
 				mouse.i++;
 				
-				Sleep(100);
+				Delay(100);
 				
 				if(kbhit()) mouse.kb_hit=getch();
 				if(mouse.kb_hit == 'c' || mouse.kb_hit == 'C' || KEY_DOWN(VK_F2)) break;
@@ -67,21 +73,21 @@ int main(){
 		else if(mouse.kb_hit == 'e' || mouse.kb_hit == 'E' || KEY_DOWN(VK_F3)){
 			cout<<"Moving."<<endl;
 						
-			while(!kbhit()){						
+			while(1){						
 				SetCursorPos(mouse.cursor[mouse.i].x,mouse.cursor[mouse.i].y);
 				cout<<mouse.i<<":\t"<<"X:"<<mouse.cursor[mouse.i].x<<"\tY:"<<mouse.cursor[mouse.i].y<<endl;
 
 				if (mouse.cursor[mouse.i].click==1){
             		printf("Mouse clicked.\n");
             		mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);   
-					Sleep(50);  
+					Delay(50);  
 					mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);  
-					Sleep(50); 	
+					Delay(50); 	
         		}				
 				
 				mouse.i++;
 				
-				Sleep(100);
+				Delay(100);
 				
 				if(mouse.cursor[mouse.i].x == 0 && mouse.cursor[mouse.i].y == 0) break;	
 				
