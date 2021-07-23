@@ -21,4 +21,4 @@
 * C/C++
 
 # References
-* ...
+* https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-mouse_event
