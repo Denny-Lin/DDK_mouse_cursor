@@ -1,5 +1,5 @@
 # DDK_mouse_cursor
-* Cursor moving on its own.
+* The cursor moves and clicks on its own.
 * 7/18 mouse_move.c implements recording of moving.
   * Type 's' to record and type 'c' to stop recording.
   * Type 'e' to execute.
