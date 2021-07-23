@@ -5,12 +5,13 @@
   * Type 'e' to execute.
   * It can record 60s (6000/100), but you can change it.
   * Next time, I will add click function and change it to a structure.
+* 7/23 Add click function.
+  * Some bugs were fixed, and it works well.
 * To be more convenient, I will use txt file to record moving and clicking instead of array.
   * MOV x y 100(ms)
   * CLK ...
   * ... 
-* 7/23 Add click function.
-  * Some bugs were fixed, and it works well.
+
 
 # Platform
 * Windows
