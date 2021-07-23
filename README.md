@@ -11,6 +11,7 @@
   * MOV x y 100(ms)
   * CLK x y 100(ms)
   * ... 
+* I hope one day this project could be Selenium-like.
 
 
 # Platform
