@@ -7,9 +7,9 @@
   * Next time, I will add click function and change it to a structure.
 * 7/23 Add click function.
   * Some bugs were fixed, and it works well.
-* To be more convenient, I will use txt file to record moving and clicking instead of array.
+* To be more convenient, I will use txt file to record the moving and clicking instead of array.
   * MOV x y 100(ms)
-  * CLK ...
+  * CLK x y 100(ms)
   * ... 
 
 
