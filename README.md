@@ -10,7 +10,7 @@
   * CLK ...
   * ... 
 * 7/23 Add click function.
- * Some bugs were fixed, and it works well.
+  * Some bugs were fixed, and it works well.
 
 # Platform
 * Windows
